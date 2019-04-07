@@ -1,6 +1,9 @@
 "
 " BEGIN VUNDLE
 "
+"
+" You will need to install Vundle, instructions here:
+" https://github.com/VundleVim/Vundle.vim#quick-start
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -31,6 +34,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " Plugin for text completion
+" You will need to build YCM Core, see instructions here:
+" https://github.com/Valloric/YouCompleteMe#linux-64-bit
 Plugin 'Valloric/YouCompleteMe'
 set completeopt-=preview
 
@@ -67,20 +72,35 @@ set expandtab
 
 set textwidth=120
 set t_Co=256
-set t_AB=[48;5;%dm
-set t_AF=[38;5;%dm
-set term=screen-256color
+set t_AB=[48;5;%dm
+set t_AF=[38;5;%dm
+set term=xterm-256color
 set t_ut=
+
+" Colour scheme options
 syntax on
 colorscheme sideWinder
+
+" Line numbers
 set number
+
+" Highlights the matching brace/bracket under the cursor
 set showmatch
+
+" Auto detect indenting style
 filetype plugin indent on
 
-" autocmd Bufread,BufNewFile *.cpp set filetype=c
+" Highlight search matches
 set hlsearch
 
 autocmd BufNewFile,BufRead *.tem set filetype=cpp
 
 " Turn off audible bell
 set visualbell
+
+" Powerline status bar
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+" Always show the status bar
+set laststatus=2
