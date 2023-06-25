@@ -95,8 +95,8 @@ set hlsearch
 
 autocmd BufNewFile,BufRead *.tem set filetype=cpp
 
-" Turn off audible bell
-set visualbell
+" Turn off all bells (stops vim from beeping at you or flashing the screen)
+set belloff=all
 
 " Powerline status bar
 python3 from powerline.vim import setup as powerline_setup
