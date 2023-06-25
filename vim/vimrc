@@ -38,6 +38,7 @@ Plugin 'VundleVim/Vundle.vim'
 " https://github.com/Valloric/YouCompleteMe#linux-64-bit
 Plugin 'Valloric/YouCompleteMe'
 set completeopt-=preview
+let g:ycm_clangd_args = ['--noclang-tidy'] " Wish I could configure it to be less aggressive
 
 " Many nice colorschemes
 Plugin 'rafi/awesome-vim-colorschemes'
