@@ -93,7 +93,5 @@ filetype plugin indent on
 " Highlight search matches
 set hlsearch
 
-autocmd BufNewFile,BufRead *.tem set filetype=cpp
-
 " Turn off all bells (stops vim from beeping at you or flashing the screen)
 set belloff=all
