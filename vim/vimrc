@@ -39,6 +39,15 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 set completeopt-=preview
 
+" Many nice colorschemes
+Plugin 'rafi/awesome-vim-colorschemes'
+
+" Better Python syntax highlighting
+Plugin 'vim-python/python-syntax'
+
+" XML tag completion
+Plugin 'sukima/xmledit'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
