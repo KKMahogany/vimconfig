@@ -114,11 +114,3 @@ fi
 # Set vim as default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
-
-# Start the powerline daemon
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-# Enable powerline (after installing powerline, you probably need to restart your terminal)
-. /home/kevin/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-
