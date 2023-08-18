@@ -38,7 +38,6 @@ Plugin 'VundleVim/Vundle.vim'
 " https://github.com/Valloric/YouCompleteMe#linux-64-bit
 Plugin 'Valloric/YouCompleteMe'
 set completeopt-=preview
-let g:ycm_clangd_args = ['--noclang-tidy'] " Wish I could configure it to be less aggressive
 
 " Many nice colorschemes
 Plugin 'rafi/awesome-vim-colorschemes'
@@ -48,6 +47,15 @@ Plugin 'vim-python/python-syntax'
 
 " XML tag completion
 Plugin 'sukima/xmledit'
+
+" Improved Pandoc highlighting
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+
+" Highlight trailing whitespace
+Plugin 'ntpeters/vim-better-whitespace'
+
+" Aligning tables
+Plugin 'godlygeek/tabular'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,7 +102,7 @@ set tabstop=8
 
 
 " Tell Vim how many colours to use.
-" 
+"
 " These days, most terminals will support true colour (24-bit colours)
 " out of the box, but if you want a more portable but still pretty vimrc,
 " set to 256, like this:
@@ -134,3 +142,6 @@ set hlsearch
 
 " Turn off all bells (stops vim from beeping at you or flashing the screen)
 set belloff=all
+
+" YCM global config path
+let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
