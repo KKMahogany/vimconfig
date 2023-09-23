@@ -145,3 +145,6 @@ set belloff=all
 
 " YCM global config path
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
+
+" Highlight markdown codeblocks correctly.
+let g:markdown_fenced_languages = ['python', 'javascript', 'sql', 'cpp', 'bash']
