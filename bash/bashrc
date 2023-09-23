@@ -111,6 +111,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Set vim as default editor
-export VISUAL=vim
+# Set nvim as default editor and use nvim instead of vim
+if command -v nvim > /dev/null; then
+    alias oldvim=`command -v vim` # Alias to get the old vim if you need it
+    export VISUAL=nvim
+    alias vim='nvim'
+else
+    export VISUAL=vim
+fi
+
 export EDITOR="$VISUAL"
