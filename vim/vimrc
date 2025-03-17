@@ -143,8 +143,14 @@ set hlsearch
 " Turn off all bells (stops vim from beeping at you or flashing the screen)
 set belloff=all
 
+"
+" YCM Configuration
+"
+
 " YCM global config path
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
+" Uncomment to turn off clang tidy, which can be quite aggressive
+"let g:ycm_clangd_args = ['--noclang-tidy']
 
 " Highlight markdown codeblocks correctly.
 let g:markdown_fenced_languages = ['python', 'javascript', 'sql', 'cpp', 'bash']
